@@ -1,0 +1,10 @@
+@startuml order_of_cases
+    participant CAMERA
+    actor SERVER
+    participant ROBOT
+
+    CAMERA -> SERVER : PICTURE
+    SERVER -> ROBOT : ROUTE
+    ROBOT -> ROBOT : PERFORMANCE
+    ROBOT -> SERVER : STATE
+@enduml
