@@ -1,0 +1,11 @@
+#include <opencv2/opencv.hpp>
+
+class ContrastObjectDetector {
+public:
+    ContrastObjectDetector();
+    std::vector<cv::Rect> detect(cv::Mat& frame);
+
+private:
+    cv::Ptr<cv::SimpleBlobDetector> blobDetector_;
+};
+git tag Этот класс будет использоваться для поиска контрастных объектов на изображении и определения их ограничивающих прямоугольников. В конструкторе мы создаем экземпляр класса cv::SimpleBlobDetector из библиотеки OpenCV, который будет использоваться для обнаружения контрастных объектов.Метод detect принимает объект cv::Mat, который содержит изображение, и возвращает вектор ограничивающих прямоугольников, которые обнаружены на изображении.
