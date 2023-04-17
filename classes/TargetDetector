@@ -1,0 +1,16 @@
+#include <opencv2/opencv.hpp>
+
+class TargetDetector {
+public:
+    TargetDetector(cv::Mat& image, cv::Scalar lower, cv::Scalar upper);
+    double getDistanceToTarget();
+
+private:
+    cv::Mat image_;
+    cv::Scalar lower_;
+    cv::Scalar upper_;
+    cv::Point targetCenter_;
+    double distanceToTarget_;
+
+    void detectTarget();
+};
