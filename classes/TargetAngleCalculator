@@ -1,0 +1,11 @@
+#include <opencv2/opencv.hpp>
+
+class TargetAngleCalculator {
+public:
+    TargetAngleCalculator();
+    float calculate(cv::Mat& frame, const cv::Point2f& targetPoint);
+
+private:
+    float angle_;
+};
+// Этот класс будет использоваться для вычисления угла поворота к точке цели на изображении. Метод calculate принимает объект cv::Mat, который содержит изображение, и координаты точки цели на изображении. Метод возвращает угол поворота к точке цели.
