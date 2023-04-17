@@ -1,0 +1,12 @@
+#include <opencv2/opencv.hpp>
+
+class CameraCapture {
+public:
+    CameraCapture();
+    ~CameraCapture();
+    bool isOpened();
+    bool read(cv::Mat& frame);
+
+private:
+    cv::VideoCapture capture_;
+};
